@@ -1,5 +1,5 @@
 {
-  "name": "skillkits",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/afroz23/skillkits.git"
+  },
+  "engines": {
+    "node": "16.x"
   },
   "keywords": [],
   "author": "",
