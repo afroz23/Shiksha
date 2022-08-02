@@ -1,0 +1,1 @@
+// will send mail to the users when invited to join a subject

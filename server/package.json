@@ -1,0 +1,42 @@
+{
+  "name": "skillkits",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afroz23/skillkits.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.15.0",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.2",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.12",
+    "q": "^1.5.1",
+    "rand-token": "^1.0.1",
+    "spdy": "^4.0.2",
+    "utf-8": "^2.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/afroz23/skillkits/issues"
+  },
+  "homepage": "https://github.com/afroz23/skillkits#readme"
+}
