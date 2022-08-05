@@ -14,8 +14,11 @@
   "engines": {
     "node": "16.x"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "Afroz quraishi",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.15.0",
