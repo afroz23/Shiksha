@@ -22,9 +22,9 @@ module.exports = (router) => {
         })
     })
     router.get('/',(req,res)=>{
-        res.status(200);
-        console.log("In / route", req.user);
-        return res.send({message : "Working!"} );
+      res.status(200);
+      // console.log("In / route", req.user);
+      return res.send({ message: "Working!" });
     });
     router.get('/checkForLoggedInUser',apiHelper.checkForLoggedInUser);
     router.post('/joinSubject',subjectApi.joinSubject);
