@@ -1,5 +1,5 @@
 export const api = {
-  BASE_URL: "https://skillkitss.herokuapp.com/",
+  BASE_URL: "http://localhost:8000/",
   CHECK_FOR_LOGGED_IN_USER: "api/checkForLoggedInUser",
   STUDENT_LOGIN_URL: "auth/studentLogin",
   FACULTY_LOGIN_URL: "auth/facultylogin",

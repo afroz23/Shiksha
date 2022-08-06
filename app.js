@@ -32,14 +32,14 @@ api.use((req,res,next)=>{
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 })
-require('./src/routes/api.js')(api);
+require("../src/routes/api.js")(api);
 app.use('/api',api);
 var auth = express.Router();
 auth.use((req,res,next)=>{
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
 })
-require('./src/routes/auth.js')(auth);
+require("../src/routes/auth.js")(auth);
 app.use('/auth',auth);
 
 app.listen(port,()=>{
