@@ -28,6 +28,7 @@ app.use(cookieParser());
 app.options("*", cors());
 
 var api = express.Router();
+
 // api.use((req, res, next) => {
 //   res.setHeader("Access-Control-Allow-Origin", "*");
 //   next();
