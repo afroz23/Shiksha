@@ -3,8 +3,9 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
+import path from "path";
 import dotenv from "dotenv";
-
+const __dirname = path.resolve();
 dotenv.config({ path: __dirname + "/.env" });
 
 mongoose
@@ -19,27 +20,26 @@ mongoose
     console.log("Error connecting to muxdb" + err.stack);
   });
 
-
-const port =  8000;
+const port = 8000;
 const app = express();
-app.use(bodyParser.urlencoded({limit: '50mb', extended: false}));
-app.use(bodyParser.json({limit: '50mb'}));
+app.use(bodyParser.urlencoded({ limit: "50mb", extended: false }));
+app.use(bodyParser.json({ limit: "50mb" }));
 app.use(cookieParser());
-app.options('*',cors());
+app.options("*", cors());
 
 var api = express.Router();
-api.use((req,res,next)=>{
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  next();
-})
-require("../src/routes/api.js")(api);
-app.use('/api',api);
+// api.use((req, res, next) => {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   next();
+// });
+
+app.use("/api", api);
 var auth = express.Router();
-auth.use((req,res,next)=>{
-  res.setHeader('Access-Control-Allow-Origin', '*');
+auth.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
   next();
-})
-require("../src/routes/auth.js")(auth);
+});
+
 app.use('/auth',auth);
 
 app.listen(port,()=>{
