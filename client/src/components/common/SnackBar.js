@@ -28,7 +28,7 @@ class CustomSnackBar extends React.Component{
     }
 
     render() {
-        const { classes, theme } = this.props;
+        const { classes } = this.props;
         return (<Snackbar
         open={this.state.showSnackBar}
         message={this.state.snackBarMessage}

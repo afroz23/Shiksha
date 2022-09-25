@@ -26,8 +26,9 @@ const Common = ({
                       )}
                     </h1>
                     <h2 className="my-3">
-                      Now online education is not a big thing, Skill kits making
-                      Online Education simpler.
+                      Now online education is not a big thing,{" "}
+                      <span style={{ fontWeight: "800" }}>Shiksha App</span>{" "}
+                      making Online Education easy.
                     </h2>
                     <div className="mt-3">
                       <NavLink to={visit} className="btn-get-started ">

@@ -24,39 +24,51 @@ const useStyles = makeStyles(theme => ({
 const Home = (props) => {
     const classes = useStyles();
     return (
-        <>
-            <AppBar color="white" style={{borderBlockColor : 'white' , borderColor : 'white'}} position="static">
-                <Toolbar>
-                    <IconButton
-                        edge="start"
-                        color="white"
-                        aria-label="menu"
-                        className={classes.menuButton}
-                    >
-                    <img style={{maxWidth : '3rem' , width : '100%' , textAlign : 'right'}} src={Logo} />
-                    </IconButton>
-                    <Typography variant="h6" className={classes.title}>
-                        SkillKits
-                    </Typography>
-                    <Button onClick={()=> props.history.push('/signup')} color="inherit">
-                        Signup
-                    </Button>
-                    <Button onClick={()=> props.history.push('/login')} color="inherit">
-                        Login
-                    </Button>
-                </Toolbar>
-                {/* <ModalDialog open={open} handleClose={handleClose} /> */}
-            </AppBar>
-            <Common
-                name='Grow your Skills with'
-                imgsrc={home}
-                isCompName={true}
-                compName="Skill Kits"
-                visit='/login'
-                btnname="Get Started"
-            />
-        </>
-    )
+      <>
+        <AppBar
+          color="white"
+          style={{ borderBlockColor: "white", borderColor: "white" }}
+          position="static"
+        >
+          <Toolbar>
+            <IconButton
+              edge="start"
+              color="white"
+              aria-label="menu"
+              className={classes.menuButton}
+            >
+              <img
+                style={{ maxWidth: "3rem", width: "100%", textAlign: "right" }}
+                src={Logo}
+              />
+            </IconButton>
+            <Typography variant="h6" className={classes.title}>
+              Shiksha
+            </Typography>
+            <Button
+              onClick={() => props.history.push("/signup")}
+              color="inherit"
+            >
+              Signup
+            </Button>
+            <Button
+              onClick={() => props.history.push("/login")}
+              color="inherit"
+            >
+              Login
+            </Button>
+          </Toolbar>
+        </AppBar>
+        <Common
+          name="Grow your Skills with"
+          imgsrc={home}
+          isCompName={true}
+          compName="Shiksha App"
+          visit="/login"
+          btnname="Get Started"
+        />
+      </>
+    );
 }
 
 export default Home;
