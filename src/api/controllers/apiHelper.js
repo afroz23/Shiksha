@@ -12,8 +12,8 @@ export const emailContexts  = {
 
 
 export const emailSubjects = {
-    'WELCOME' : 'Welcome to SkillKits!😊'
-}
+  WELCOME: "Welcome to Shiksha App!😊",
+};
 
 
 export const emailHTML = {

@@ -1,3 +1,3 @@
-# Classroom
+# Shiksha App
 
-### A Real-world classroom application for a better interaction between students and teachers.
+### A Real-world application for a better interaction between students and teacher to make education simpler.
