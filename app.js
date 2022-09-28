@@ -32,31 +32,22 @@ api.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   next();
 });
-require("./src/routes/api.js")(api);
+
 app.use("/api", api);
 var auth = express.Router();
 auth.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   next();
 });
-require("./src/routes/auth.js")(auth);
+
 app.use("/auth", auth);
 const __dirname = path.resolve();
 if (process.env.NODE_ENV === "production") {
-<<<<<<< HEAD
-  app.use(express.static(path.join(__dirname, "frontend", "build")));
-
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
-  });
-
-=======
-  app.use(express.static(path.join(__dirname, "./client/build")));
+  app.use(express.static(path.join(__dirname, "client", "build")));
 
   app.get("*", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "./client/build/index.html"))
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
   );
->>>>>>> 846c3fc (Revert "package error fixed")
 } else {
   app.get("/", (req, res) => {
     res.send("API is running..");
