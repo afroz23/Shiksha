@@ -41,7 +41,7 @@ auth.use((req, res, next) => {
 });
 require("./src/routes/auth.js")(auth);
 app.use("/auth", auth);
-// const __dirname=
+const __dirname = path.resolve();
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "client", "build")));
 
