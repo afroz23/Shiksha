@@ -1,15 +1,11 @@
 {
-  "name": "server",
+  "name": "backend",
   "version": "1.0.0",
-  "engines": {
-    "node": "16.17.0"
-  },
-  "type": "module",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
+    "start": "nodemon --exec babel-node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
